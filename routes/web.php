@@ -11,10 +11,18 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-Route::get('/','PrincipalController@index');
+Route::get('/', function () {
+    return view('auth.login');
+});
 
-Route::get('/index.html','PrincipalController@index');
+//Route::get('/','PrincipalController@index');
 
+//Route::get('/login.html','PrincipalController@index')->name('web.login');
+
+Route::get('/registro.html','PrincipalController@registro')->name('registro');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Auth::routes();
+Auth::routes(['verify' => true]);

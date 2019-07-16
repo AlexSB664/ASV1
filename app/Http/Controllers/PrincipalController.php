@@ -16,5 +16,9 @@ class PrincipalController extends Controller
     	$decrypted = Crypt::decryptString($encrypted);
     	return $encrypted.$decrypted;
     }
+
+    public function registro(){
+    	return view('registro');
+    }
     
 }
