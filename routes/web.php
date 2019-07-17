@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +24,13 @@ Route::get('/registro.html','PrincipalController@registro')->name('registro');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Auth::routes();
+/*Auth::routes();
+Route::get('email/verify', 'Auth\VerificationController@show')
+->name('verification.notice');
+Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
+Route::get('email/resend', 'Auth\VerificationController@resend')
+->name('verification.resend');*/
 Auth::routes(['verify' => true]);
+Route::get('profile', function () {
+    // Only verified users may enter...
+})->middleware('verified');
