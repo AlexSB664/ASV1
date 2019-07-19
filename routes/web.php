@@ -23,7 +23,9 @@ Route::get('/registro.html','PrincipalController@registro')->name('registro');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/orgIntercambio', 'PrincipalController@orgIntercambio')->name('nuevoInter');
+Route::get('/misIntercambios', 'PrincipalController@misIntercambios')->name('listaInter');
+Route::get('/desbloquearIntercambio', 'PrincipalController@aguaFiestas')->name('aguaFiestas');
 /*Auth::routes();
 Route::get('email/verify', 'Auth\VerificationController@show')
 ->name('verification.notice');

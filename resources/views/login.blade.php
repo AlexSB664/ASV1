@@ -27,7 +27,7 @@
             <h3>Bienvenido a Amigos Secretos</h3>
             <p>Amigos Secretos es la aplicacion WEB favorita de todos para hacer intercambio de regalos.
             </p>
-            <p>Entra para poder organizar intercambios de una manera divertida</p>
+            <p>Entra para poder organizar intercambios de una manera divertida y totalmente anonima.</p>
             <form class="m-t" role="form" action="index.html">
                 <div class="form-group">
                     <input type="email" class="form-control" placeholder="Correo" required="">
